@@ -67,11 +67,11 @@ for (( i=1; i<=${worker_node_count}; i++ )); do
         govc vm.clone -vm "${template_name}" \
                 -ds "${datastore_name}" \
                 -folder "${vm_folder}" \
-				-pool="${resource_pool}" \
+		-pool="${resource_pool}" \
                 -on="false" \
                 -c="2" -m="8192" \
                 -net="${network_name}" \
-				-net.address=00:50:56:96:00:1$i \
+		-net.address=00:50:56:96:00:1$i \
                 $vm
 	govc vm.disk.change -vm $vm -disk.label "Hard disk 1" -size 120G
 done
@@ -83,11 +83,11 @@ vm="${cluster_id}-bootstrap"
 govc vm.clone -vm "${template_name}" \
                 -ds "${datastore_name}" \
                 -folder "${vm_folder}" \
-				-pool="${resource_pool}" \
+		-pool="${resource_pool}" \
                 -on="false" \
                 -c="4" -m="8192" \
                 -net="${network_name}" \
-				-net.address=00:50:56:96:00:06 \
+		-net.address=00:50:56:96:00:06 \
                 $vm
 govc vm.disk.change -vm $vm -disk.label "Hard disk 1" -size 120G
 

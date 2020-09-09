@@ -15,7 +15,7 @@ export GOVC_INSECURE=1
 template_name="fcos-32.2"
 cluster_id=ocp-cluster
 datastore_name=OCP_DS1
-vm_folder=ocp45
+vm_folder=okd45
 network_name="VM Network"
 master_node_count=3
 worker_node_count=2
@@ -27,7 +27,7 @@ govc import.ova -options=./rhcos.json -name=fcos-32.2 \
 govc vm.markastemplate vm/fcos-32.2
 
 # Create folder 
-govc folder.create /Datacenter/vm/ocp45
+govc folder.create /Datacenter/vm/okd45
 
 # Create resource pool
 govc pool.create \
@@ -39,10 +39,10 @@ govc pool.create \
 -mem.limit=-1 \
 -mem.reservation=0 \
 -mem.shares=normal \
-/Datacenter/host/Cluster/Resources/ocp45
+/Datacenter/host/Cluster/Resources/okd45
 #Resource pool name
 
-resource_pool="/Datacenter/host/Cluster/Resources/ocp45"
+resource_pool="/Datacenter/host/Cluster/Resources/okd45"
 
 # Create the master nodes
 

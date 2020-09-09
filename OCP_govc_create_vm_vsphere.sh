@@ -1,5 +1,5 @@
 #!/bin/bash
-# Title: OCP UPI-vSphere-GenerateVMs=using-GOVC
+# OCP UPI vSphere Create VMs using GOVC
 # Change: cluster_id, datastore_name, vm_folder, network_name, master_node_count, and worker_node_count.
 echo "Script by ThanhTV"
 govc version
